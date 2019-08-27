@@ -1,5 +1,7 @@
-<p>
-    layout works!
-</p>
+<p>layout works!</p>
 <hr>
-<router-outlet>Loading...</router-outlet>
+
+<router-outlet></router-outlet>
+<!-- (change)="emitProgress($event)" -->
+
+<button type="button" (click)="emitProgress(1)">+</button>

@@ -7,16 +7,16 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 const APP_ROUTES: Routes = [
     {
-        path: 'main', 
+        path: '', 
         component: LayoutComponent,
         children: [
-            { path: 'module', loadChildren: './modules/progress-bar/progress-bar.module#ProgressBarModule' },
-            { path: '', redirectTo: 'module', pathMatch: 'full' },
-            { path: '**', redirectTo: 'module', pathMatch: 'full' },    
+            { path: 'progress', loadChildren: './modules/progress-bar/progress-bar.module#ProgressBarModule' },
+            // { path: '', redirectTo: 'progress', pathMatch: 'full' },
+            // { path: '**', redirectTo: 'progress', pathMatch: 'full' },    
         ]
     },
-    { path: '', redirectTo: 'main', pathMatch: 'full' },
-    { path: '**', redirectTo: 'main', pathMatch: 'full' },
+    { path: '', redirectTo: '', pathMatch: 'full' },
+    { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
